@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="678.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.c482_project.ModifyPartController">
+   <children>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="600.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Modify Part">
+                     <HBox.margin>
+                        <Insets top="40.0" />
+                     </HBox.margin>
+                  </Text>
+                  <ButtonBar prefWidth="215.0">
+                     <buttons>
+                        <RadioButton fx:id="InhouseRBN" mnemonicParsing="false" onAction="#selectInHouse" prefHeight="16.0" prefWidth="94.0" selected="true" text="In-house">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Source" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="outsourceRBN" mnemonicParsing="false" onAction="#selectOutsourced" text="Outsourced" toggleGroup="$Source" />
+                     </buttons>
+                  </ButtonBar>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="132.0" layoutY="62.0" prefHeight="198.0" prefWidth="138.0">
+         <children>
+            <TextField id="IdTextField" fx:id="IDTextField" disable="true" promptText="AUTO-GENERATED">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField id="NameTextField" fx:id="nameTextField" prefHeight="23.0" prefWidth="245.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField id="InventoryTextField" fx:id="inventortyTextField">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField id="PriceCostTextField" fx:id="priCosTextField">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField id="MaxTextField" fx:id="maxTextField" prefHeight="23.0" prefWidth="116.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField id="MachineIdTextField" fx:id="MachineTextField" prefHeight="23.0" prefWidth="157.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+      <HBox layoutX="277.0" layoutY="283.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#OnActionSave" text="Save">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#OnActionCancel" text="Cancel" />
+         </children>
+      </HBox>
+      <Text id="ExceptionText" fx:id="ExceptionText" layoutX="14.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exception:" wrappingWidth="531.13671875" />
+      <VBox layoutX="4.0" layoutY="62.0" prefHeight="145.0" prefWidth="128.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID                    ">
+               <VBox.margin>
+                  <Insets bottom="16.0" top="5.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+               <VBox.margin>
+                  <Insets bottom="16.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inventory">
+               <VBox.margin>
+                  <Insets bottom="16.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Price/cost">
+               <VBox.margin>
+                  <Insets bottom="16.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Max">
+               <VBox.margin>
+                  <Insets bottom="16.0" />
+               </VBox.margin>
+            </Text>
+            <Text id="MachineIDtext" fx:id="CompMacLBL" strokeType="OUTSIDE" strokeWidth="0.0" text="Machine ID">
+               <VBox.margin>
+                  <Insets bottom="14.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </VBox>
+      <TextField id="MinTextField" fx:id="minTextField" layoutX="330.0" layoutY="196.0" prefHeight="23.0" prefWidth="93.0" />
+      <Text layoutX="300.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" wrappingWidth="30.13671875" />
+   </children>
+</AnchorPane>

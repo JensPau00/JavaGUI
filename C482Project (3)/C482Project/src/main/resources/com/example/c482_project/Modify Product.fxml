@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.c482_project.ModifyProductController">
+   <children>
+      <TableView fx:id="PartsTableView" layoutX="758.0" layoutY="100.0" prefHeight="200.0" prefWidth="428.0">
+        <columns>
+          <TableColumn fx:id="partIDColumn" prefWidth="75.0" text="Part ID" />
+          <TableColumn fx:id="partNameColumn" prefWidth="75.0" text="Part Name" />
+            <TableColumn fx:id="inventoryLevelColumn" prefWidth="110.0" text="Inventory Level" />
+            <TableColumn fx:id="PriCosColumn" prefWidth="167.0" text="Price/Cost per unit" />
+            <TableColumn prefWidth="167.0" text="Price/Cost per unit" />
+        </columns>
+      </TableView>
+      <TextField fx:id="searchPartTextField" layoutX="972.0" layoutY="62.0" onKeyPressed="#onEnterPressedSearchPart" prefHeight="24.0" prefWidth="204.0" promptText="Search for a Part ID or name" />
+      <HBox layoutX="69.0" layoutY="100.0" prefHeight="471.0" prefWidth="168.0">
+         <children>
+            <VBox prefHeight="440.0" prefWidth="82.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
+                     <VBox.margin>
+                        <Insets bottom="16.0" top="3.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Name">
+                     <VBox.margin>
+                        <Insets bottom="16.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inv">
+                     <VBox.margin>
+                        <Insets bottom="16.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Price">
+                     <VBox.margin>
+                        <Insets bottom="16.0" />
+                     </VBox.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+               </children>
+            </VBox>
+            <VBox prefHeight="471.0" prefWidth="86.0">
+               <children>
+                  <TextField fx:id="prodIDTextField" disable="true" promptText="autogen">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="nameTextField">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="invTextField">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="priceTextField">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="maxTextField" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Text layoutX="261.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+      <TextField fx:id="minTextField" layoutX="301.0" layoutY="234.0" prefHeight="23.0" prefWidth="86.0" />
+      <Button layoutX="1009.0" layoutY="546.0" mnemonicParsing="false" onAction="#OnActionRemoveAssociated" text="Remove Associated Part" />
+      <Button layoutX="1009.0" layoutY="579.0" mnemonicParsing="false" onAction="#OnActionSave" text="Save" />
+      <Button layoutX="1101.0" layoutY="579.0" mnemonicParsing="false" onAction="#OnActionCancel" text="Cancel" />
+      <Button layoutX="1079.0" layoutY="306.0" mnemonicParsing="false" onAction="#OnActionAdd" text="Add" />
+      <Text layoutX="69.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modify Product" wrappingWidth="112.0" />
+      <TableView fx:id="ProductParts" layoutX="758.0" layoutY="336.0" prefHeight="200.0" prefWidth="428.0">
+         <columns>
+            <TableColumn fx:id="ProdPartIDColumn" prefWidth="75.0" text="Part ID" />
+            <TableColumn fx:id="ProdPartName" prefWidth="75.0" text="Part Name" />
+            <TableColumn fx:id="ProdInventoryLevelColumn" prefWidth="110.0" text="Inventory Level" />
+         </columns>
+      </TableView>
+      <Text fx:id="ExceptionText" layoutX="51.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+   </children>
+</AnchorPane>
